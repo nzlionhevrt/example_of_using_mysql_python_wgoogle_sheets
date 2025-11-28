@@ -9,6 +9,7 @@
 - `load_plan_from_sheets.py` - Python скрипт для загрузки данных из Google Sheets
 - `requirements.txt` - зависимости Python
 - `env.example` - пример файла с настройками
+- `install_docker.sh` - скрипт для установки Docker и Docker Compose
 
 ## Требования
 
@@ -16,6 +17,23 @@
 - Python 3.8+
 
 ## Установка и запуск
+
+### 0. Установка Docker и Docker Compose
+
+Если Docker и Docker Compose еще не установлены, используйте скрипт установки:
+
+```bash
+sudo bash install_docker.sh
+```
+
+Или установите вручную по [официальной документации Docker](https://docs.docker.com/engine/install/).
+
+После установки проверьте:
+
+```bash
+docker --version
+docker compose version
+```
 
 ### 1. Запуск MySQL через Docker Compose
 
