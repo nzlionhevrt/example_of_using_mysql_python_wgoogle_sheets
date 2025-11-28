@@ -2,7 +2,7 @@ name: analytics
 
 services:
   mysql:
-    image: mysql:8.0
+    image: ${MYSQL_IMAGE:-mysql:8.0}
     container_name: analytics_mysql
     restart: unless-stopped
     env_file: .env

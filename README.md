@@ -38,7 +38,15 @@ docker compose version
 ### 1. Запуск MySQL через Docker Compose
 
 ```bash
-docker-compose up -d
+docker images | grep mysql
+```
+
+Если образ найден, можно использовать его напрямую, указав полный тег в `.env`.
+
+#### Запуск контейнера
+
+```bash
+docker compose up -d --build
 ```
 
 MySQL будет доступен на порту 3306.
