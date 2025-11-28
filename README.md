@@ -4,12 +4,25 @@
 
 ## Структура проекта
 
+### Основные файлы
 - `docker-compose.yml` - конфигурация для запуска MySQL
 - `init.sql` - SQL скрипт для инициализации БД и таблиц
-- `load_plan_from_sheets.py` - Python скрипт для загрузки данных из Google Sheets
+- `load_plan_from_sheets.py` - главный скрипт для загрузки данных из Google Sheets
 - `requirements.txt` - зависимости Python
 - `env.example` - пример файла с настройками
 - `install_docker.sh` - скрипт для установки Docker и Docker Compose
+- `datalens_query.sql` - SQL запрос для создания объединенного датасета в DataLens
+
+### Модули Python (папка `app/`)
+- `app/config.py` - конфигурация и константы
+- `app/logger_config.py` - настройка логирования
+- `app/decorators.py` - декораторы (retry и др.)
+- `app/models.py` - модели данных (LoadResult)
+- `app/validators.py` - валидация данных перед загрузкой
+- `app/transformers.py` - преобразование данных
+- `app/google_sheets.py` - работа с Google Sheets
+- `app/database.py` - работа с базой данных MySQL
+- `app/load_service.py` - сервис загрузки данных
 
 ## Требования
 
